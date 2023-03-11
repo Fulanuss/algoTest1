@@ -1,26 +1,26 @@
 ALGORITHM firstTask
 VAR
     phrase: STRING;
-    nbreMots, nbreVoyelles: INTEGER;
-    i,m,v: INTEGER;
+    nbreaCaracteres, nbreMots, nbreVoyelles: INTEGER;
+
 BEGIN
-    write("Toute grande existence est coupable.");
-    read(phrase);
+REPEAT
+     write("Ecrivez une phrase");
+     read(phrase);
+UNTIL (phrase[phrase.length-1]="." OR phrase[phrase.lengt   h-1 <> "."])
+    wrtite(phrase.length)
+    nbreMots:=1;
     FOR i FROM 0 TO phrase.length STEP 1 DO
-        read(phrase[i]);
-        i:=i+1;
-    END_FOR
-    m:=1;
-    FOR i FROM 0 TO phrase.length STEP 1 DO
-        IF (phrase[i]="") THEN
-            m:=m+1;
+        IF (phrase[i]=" ") THEN
+            nbreMots:=nbreMots+1;
         END_IF
     END_FOR
-    v:=1;
+    write("le nombre de mots est de:", nbreMots)
+    nbreVoyelles:=0;
     FOR i FROM 0 TO phrase.length STEP 1 DO
         IF (phrase[i]="a" OR phrase[i]="e" OR phrase[i]="i" OR phrase[i]="o" OR phrase[i]="u" OR phrase[i]="y") THEN
-            v:=v+1;
+            nbreVoyelles:=nbreVoyelles+1;
         END_IF
-        nbreVoyelles=v;
     END_FOR
+    write("le nombre de voyelles est de:" , nbreVoyelles)
 END
