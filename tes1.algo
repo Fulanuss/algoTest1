@@ -1,14 +1,15 @@
 ALGORITHM firstTask
 VAR
     phrase: STRING;
-    nbreaCaracteres, nbreMots, nbreVoyelles: INTEGER;
+    nbreCaracteres, nbreMots, nbreVoyelles: INTEGER;
 
 BEGIN
 REPEAT
      write("Ecrivez une phrase");
      read(phrase);
 UNTIL (phrase[phrase.length-1]="." OR phrase[phrase.lengt   h-1 <> "."])
-    wrtite(phrase.length)
+    nbreCaracteres:=phrase.length;
+    wrtite(nbreCaracteres)
     nbreMots:=1;
     FOR i FROM 0 TO phrase.length STEP 1 DO
         IF (phrase[i]=" ") THEN
