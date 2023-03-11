@@ -9,7 +9,7 @@ REPEAT
      read(phrase);
 UNTIL (phrase[phrase.length-1]="." OR phrase[phrase.lengt   h-1 <> "."])
     nbreCaracteres:=phrase.length;
-    wrtite(nbreCaracteres)
+    write(nbreCaracteres);
     nbreMots:=1;
     FOR i FROM 0 TO phrase.length STEP 1 DO
         IF (phrase[i]=" ") THEN
